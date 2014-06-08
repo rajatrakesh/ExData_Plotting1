@@ -42,11 +42,13 @@ lines(plotdata$Time,plotdata$Sub_metering_3,col="blue")
 legend("topright",
        col=c("black", "red", "blue"),
        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
+       bty="n",
        lty=1)
 
 plot(plotdata$Time, plotdata$Global_reactive_power,
-     type="l",
+     type="n",
      xlab="datetime",
      ylab="Global_reactive_power")
+lines(plotdata$Time, plotdata$Global_reactive_power)
 #Close Device
 dev.off()
